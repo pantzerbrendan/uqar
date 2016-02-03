@@ -35,7 +35,7 @@ void        AppInit(Application *app)
     // read file and initialize data
     std::string *array = io::read_data(app->save_file);
     size_t nb_lines = io::count_lines(app->save_file);
-    for (size_t index = 0; index < nb_lines; index++)
+    for (size_t index = 0; index < nb_lines; index++) // probablement utiliser une liste chainee
        app->data[index] = NewUser(array[index]);
     delete[] array;
 

@@ -13,6 +13,7 @@ SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/data/User.cpp \
 				$(SOURCE)/data/Birthdate.cpp \
 				$(SOURCE)/data/Address.cpp \
+				$(SOURCE)/data/Acronyms.cpp \
 				$(SOURCE)/utils/my_string.cpp \
 				$(SOURCE)/utils/io.cpp
 

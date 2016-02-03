@@ -37,6 +37,7 @@ void        AppInit(Application *app)
     size_t nb_lines = io::count_lines(app->save_file);
     for (size_t index = 0; index < nb_lines; index++)
        app->data[index] = NewUser(array[index]);
+    delete[] array;
 
     // initializes commands function pointers array
     CommandInit(app);

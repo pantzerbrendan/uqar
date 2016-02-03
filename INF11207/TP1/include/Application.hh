@@ -4,6 +4,7 @@
 #include <string>
 #include <cstddef>
 #include "data/User.hh"
+#include "Commands.hh"
 
 typedef struct  s_application    Application;
 typedef void (*fct_ptr)(Application *);
@@ -17,7 +18,7 @@ typedef struct  s_application
     std::string     lastCommand;
 
     /* function pointers array for the different commands */
-    fct_ptr         commands[8];
+    fct_ptr         commands[NB_CMD];
 
     /* data : contains data in the database */
     User            *data[30];

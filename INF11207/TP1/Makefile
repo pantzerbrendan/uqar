@@ -20,7 +20,7 @@ OBJS		=	$(SRC:.cpp=.o)
 
 CXXFLAGS	+=	-W -Wall -Wextra
 CXXFLAGS	+=	-std=c++11
-#CXXFLAGS	+=	-Werror
+CXXFLAGS	+=	-Werror
 CXXFLAGS	+=	-I$(INCLUDE)
 LDFLAGS		+=	-lncurses
 

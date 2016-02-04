@@ -5,6 +5,7 @@
 #include <ostream>
 #include "Birthdate.hh"
 #include "Address.hh"
+#include "Acronyms.hh"
 
 typedef struct s_user
 {
@@ -13,11 +14,12 @@ typedef struct s_user
     Address     *address;
     Birthdate   *birthdate;
     //sigles de cours
+    Acronyms    *acronyms;
 
     std::string (*CSVFormatter)(const struct s_user *);
 }               User;
 
-User            *NewUser(const std::string &, const std::string &, Address *, Birthdate * /*, sigles*/);
+User            *NewUser(const std::string &, const std::string &, Address *, Birthdate *, Acronyms *);
 User            *NewUser(const std::string &);
 void            DeleteUser(User *);
 

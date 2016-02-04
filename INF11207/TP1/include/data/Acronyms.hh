@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include <ostream>
 #include <string>
 #include <cstddef>
 
@@ -26,3 +27,5 @@ typedef struct  s_acronyms
 
 void    AcronymsInit(Acronyms *);
 void    AcronymsDestroy(Acronyms *);
+
+std::ostream    &operator<<(std::ostream &, const Acronyms &);

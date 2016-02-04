@@ -1,4 +1,5 @@
 
+#include <ostream>
 #include "data/Acronyms.hh"
 
 /* STATIC FUNCTION PROTOTYPES */
@@ -69,8 +70,7 @@ static std::string     AC_ToString(Acronyms *acr)
     std::string result = "";
     for (int i = 0; i < NB_ACRONYMS; i++)
     {
-        if (acr->selected[i])
-            result += acr->names[i] + ", ";
+        if (acr->selected[i]) result += acr->names[i] + ", ";
     }
     result = result.substr(0, result.size() - 2); // removes the last ", "
     return (result);
@@ -84,8 +84,7 @@ static std::string     AC_CSVFormatter(Acronyms *acr)
     std::string result = "";
     for (int i = 0; i < NB_ACRONYMS; i++)
     {
-        if (acr->selected[i])
-            result += acr->names[i] + ";";
+        if (acr->selected[i]) result += acr->names[i] + ";";
     }
     result = result.substr(0, result.size() - 1); // removes the last semi-column
     return (result);
@@ -98,6 +97,21 @@ static size_t   CountSelected(Acronyms *acr)
 {
     size_t count = 0;
     for (int i = 0; i < NB_ACRONYMS; i++)
-        if (acr->selected[i]) count++;
+    if (acr->selected[i]) count++;
     return (count);
+}
+
+std::ostream    &operator<<(std::ostream &stream, const Acronyms &acr)
+{
+    int added = 0;
+    for (int i = 0; i < NB_ACRONYMS; i++)
+    {
+        if (added != 0) stream << ", ";
+        if (acr.selected[i])
+        {
+            stream << acr.names[i];
+            added++;
+        }
+    }
+    return (stream);
 }

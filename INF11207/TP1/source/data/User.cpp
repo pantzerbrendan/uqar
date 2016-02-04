@@ -7,7 +7,7 @@
 
 static std::string      U_CSVFormatter(const User *);
 
-User        *NewUser(const std::string &firstname, const std::string &lastname, Address *address, Birthdate *birthdate)
+User        *NewUser(const std::string &firstname, const std::string &lastname, Address *address, Birthdate *birthdate, Acronyms *acronyms)
 {
     User    *user = new User();
 
@@ -15,6 +15,7 @@ User        *NewUser(const std::string &firstname, const std::string &lastname, 
     user->lastname = lastname;
     user->address = address;
     user->birthdate = birthdate;
+    user->acronyms = acronyms;
 
     /** function pointer initialization */
     user->CSVFormatter = &U_CSVFormatter;
@@ -26,7 +27,10 @@ User        *NewUser(const std::string &str)
     std::string *array = my_string::split(str, ';');
     Birthdate   *date = NewBirthdate(array[6]);
     Address     *address = NewAddress(array[2], array[3], array[4], array[5]);
-    User        *user = NewUser(array[0], array[1], address, date);
+    Acronyms    acronyms;
+    AcronymsInit(&acronyms);
+
+    User        *user = NewUser(array[0], array[1], address, date, &acronyms);
 
     delete[] array;
     if (!user || !address || !date)
@@ -56,7 +60,7 @@ std::ostream    &operator<<(std::ostream &stream, const User &usr)
     stream << usr.lastname << ", ";
     stream << *(usr.address) << ", ";
     stream << *(usr.birthdate) << ", ";
-    //stream << usr->;
+    //stream << *(usr.acronyms);
     return (stream);
 }
 

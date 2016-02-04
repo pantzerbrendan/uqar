@@ -47,7 +47,6 @@ std::ostream    &operator<<(std::ostream &stream, const Birthdate &date)
     stream << date.day << "/";
     stream << date.month << "/";
     stream << date.year;
-
     return (stream);
 }
 

@@ -66,6 +66,35 @@ static int          id_selector(const std::string &text)
     return (id);
 }
 
+static bool     boolean_prompt(const std::string &text)
+{
+    std::string input;
+    while (input[0] != 'Y' && input[0] != 'y' && input[0] != 'N' && input[0] != 'n')
+    {
+        std::cout << text << " [Y/n] ";
+        getline(std::cin, input);
+    }
+    return (input == "Y" || input == "y");
+}
+
+static void     acronym_editor(Acronyms *acronyms)
+{
+    for (int i = 0; i < NB_ACRONYMS; i++)
+    {
+        bool result = boolean_prompt(acronyms->names[i]);
+        if (result)
+        {
+            if (!acronyms->activate(acronyms, (e_acronyms)i))
+            {
+                std::cerr << "Impossible de sélectionner plus de cours" << std::endl;
+                break ;
+            }
+        }
+        else
+            acronyms->deactivate(acronyms, (e_acronyms)i);
+    }
+}
+
 /*
 ** Initializes the function pointer array used to call the different functions
 ** of the application.
@@ -124,7 +153,12 @@ static void addUser(Application *app)
     Address *address = NewAddress(number, street, city, country);
     if (birth && address)
     {
-        User *user = NewUser(firstname, lastname, address, birth);
+        // acronyms handle
+        Acronyms    acronyms;
+        AcronymsInit(&acronyms);
+        acronym_editor(&acronyms);
+
+        User *user = NewUser(firstname, lastname, address, birth, &acronyms);
         if (app->Add(app, user))
         {
             std::clog << "L'utilisateur [" << firstname << ' ' << lastname << "] a correctement été ajouté." << std::endl;
@@ -169,7 +203,12 @@ static void editUser(Application *app)
     Address *address = NewAddress(number, street, city, country);
     if (birth && address)
     {
-        User *user = NewUser(firstname, lastname, address, birth);
+        // acronyms handle
+        Acronyms    acronyms;
+        AcronymsInit(&acronyms);
+        acronym_editor(&acronyms);
+
+        User *user = NewUser(firstname, lastname, address, birth, &acronyms);
         if (app->Edit(app, (size_t)id, user))
         {
             std::clog << "L'utilisateur [" << firstname << ' ' << lastname << "] a correctement été modifié." << std::endl;

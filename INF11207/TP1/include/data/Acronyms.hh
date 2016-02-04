@@ -19,8 +19,8 @@ typedef struct  s_acronyms
 
     bool        (*activate)(struct s_acronyms *, const e_acronyms);
     bool        (*deactivate)(struct s_acronyms *, const e_acronyms);
-    void        (*ToString)(struct s_acronyms *);
-    void        (*CSVFormatter)(struct s_acronyms *);
+    std::string        (*ToString)(struct s_acronyms *);
+    std::string (*CSVFormatter)(struct s_acronyms *);
     size_t      (*CountSelected)(struct s_acronyms *);
 }               Acronyms;
 

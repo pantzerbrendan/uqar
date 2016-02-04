@@ -4,8 +4,8 @@
 /* STATIC FUNCTION PROTOTYPES */
 static bool     activate(Acronyms *, const e_acronyms);
 static bool     deactivate(Acronyms *, const e_acronyms);
-static void     AC_ToString(Acronyms *);
-static void     AC_CSVFormatter(Acronyms *);
+static std::string     AC_ToString(Acronyms *);
+static std::string     AC_CSVFormatter(Acronyms *);
 static size_t   CountSelected(Acronyms *);
 /* !STATIC FUNCTION PROTOTYPES */
 
@@ -64,17 +64,31 @@ static bool     deactivate(Acronyms *acr, const e_acronyms id)
 /*
 **
 */
-static void     AC_ToString(Acronyms *acr)
+static std::string     AC_ToString(Acronyms *acr)
 {
-    (void)acr; // pour pas avoir d'erreur
+    std::string result = "";
+    for (int i = 0; i < NB_ACRONYMS; i++)
+    {
+        if (acr->selected[i])
+            result += acr->names[i] + ", ";
+    }
+    result = result.substr(0, result.size() - 2); // removes the last ", "
+    return (result);
 }
 
 /*
 **
 */
-static void     AC_CSVFormatter(Acronyms *acr)
+static std::string     AC_CSVFormatter(Acronyms *acr)
 {
-    (void)acr; // pour pas avoir d'erreur
+    std::string result = "";
+    for (int i = 0; i < NB_ACRONYMS; i++)
+    {
+        if (acr->selected[i])
+            result += acr->names[i] + ";";
+    }
+    result = result.substr(0, result.size() - 1); // removes the last semi-column
+    return (result);
 }
 
 /*

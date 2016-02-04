@@ -1,6 +1,7 @@
 
 RM			=	rm -vf
-CXX			=	g++ -g
+CXX			=	g++
+GXX			=	g++ -g
 
 INCLUDE		=	./include
 SOURCE		=	./source
@@ -26,7 +27,7 @@ CXXFLAGS	+=	-I$(INCLUDE)
 LDFLAGS		+=	-lncurses
 
 $(NAME):		$(OBJS)
-				$(CXX) $(OBJS) $(LDFLAGS) -o $(NAME)
+				$(GXX) $(OBJS) $(LDFLAGS) -o $(NAME)
 
 all:			$(NAME)
 

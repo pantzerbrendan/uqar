@@ -129,6 +129,12 @@ static bool remove(Application *app, size_t index)
     if (!app || !(app->data[index])) return (false); /** could not remove data : inexistant */
     DeleteUser(app->data[index]);
     app->data[index] = NULL;
+
+    // reorganises data in the array (no null section in the middle of the array)
+    for (; app->data[index + 1]; index++)
+        app->data[index] = app->data[index + 1];
+    app->data[index] = NULL;
+
     return (true); /** data successfully removed */
 }
 

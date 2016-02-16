@@ -66,6 +66,7 @@ static int          id_selector(const std::string &text)
     return (id);
 }
 
+
 static bool     boolean_prompt(const std::string &text)
 {
     std::string input;
@@ -153,17 +154,17 @@ static void addUser(Application *app)
     Address *address = NewAddress(number, street, city, country);
     if (birth && address)
     {
-        // acronyms handle
-        Acronyms    acronyms;
-        AcronymsInit(&acronyms);
-        acronym_editor(&acronyms);
+        Acronyms *acronyms = new Acronyms();
+        AcronymsInit(acronyms);
+        acronym_editor(acronyms);
 
-        User *user = NewUser(firstname, lastname, address, birth, &acronyms);
+        User *user = NewUser(firstname, lastname, address, birth, acronyms);
         if (app->Add(app, user))
         {
             std::clog << "L'utilisateur [" << firstname << ' ' << lastname << "] a correctement été ajouté." << std::endl;
             return ;
         }
+        AcronymsDestroy(acronyms);
         DeleteUser(user);
     }
     DeleteAddress(address);
@@ -203,17 +204,17 @@ static void editUser(Application *app)
     Address *address = NewAddress(number, street, city, country);
     if (birth && address)
     {
-        // acronyms handle
-        Acronyms    acronyms;
-        AcronymsInit(&acronyms);
-        acronym_editor(&acronyms);
+        Acronyms *acronyms = new Acronyms();
+        AcronymsInit(acronyms);
+        acronym_editor(acronyms);
 
-        User *user = NewUser(firstname, lastname, address, birth, &acronyms);
+        User *user = NewUser(firstname, lastname, address, birth, acronyms);
         if (app->Edit(app, (size_t)id, user))
         {
             std::clog << "L'utilisateur [" << firstname << ' ' << lastname << "] a correctement été modifié." << std::endl;
             return ;
         }
+        AcronymsDestroy(acronyms);
         DeleteUser(user);
     }
     DeleteAddress(address);

@@ -13,7 +13,6 @@ typedef struct s_user
     std::string lastname;
     Address     *address;
     Birthdate   *birthdate;
-    //sigles de cours
     Acronyms    *acronyms;
 
     std::string (*CSVFormatter)(const struct s_user *);

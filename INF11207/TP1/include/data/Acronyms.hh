@@ -1,7 +1,6 @@
 
 #pragma once
 
-#include <ostream>
 #include <string>
 #include <cstddef>
 
@@ -20,12 +19,13 @@ typedef struct  s_acronyms
 
     bool        (*activate)(struct s_acronyms *, const e_acronyms);
     bool        (*deactivate)(struct s_acronyms *, const e_acronyms);
-    std::string        (*ToString)(struct s_acronyms *);
-    std::string (*CSVFormatter)(struct s_acronyms *);
+    std::string        (*ToString)(const struct s_acronyms *);
+    std::string        (*CSVFormatter)(const struct s_acronyms *);
     size_t      (*CountSelected)(struct s_acronyms *);
 }               Acronyms;
 
 void    AcronymsInit(Acronyms *);
 void    AcronymsDestroy(Acronyms *);
+Acronyms *NewAcronyms(const std::string &);
 
 std::ostream    &operator<<(std::ostream &, const Acronyms &);

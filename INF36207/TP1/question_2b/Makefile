@@ -10,12 +10,13 @@ NAME		=	INF36207_Q2B
 DEBUG		=	INF36207_Q2B_debug
 
 SRC			=	$(SOURCE)/main.cpp \
-				$(SOURCE)/Configuration.cpp
+				$(SOURCE)/Configuration.cpp \
+				$(SOURCE)/sys/Thread.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 
 CXXFLAGS	+=	-W -Wall -Wextra
-CXXFLAGS	+=	-std=c++11
+CXXFLAGS	+=	-std=c++11 -lpthread
 #CXXFLAGS	+=	-Werror
 CXXFLAGS	+=	-I$(INCLUDE)
 
@@ -24,10 +25,10 @@ CXXFLAGS	+=	-I$(INCLUDE)
 				$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(NAME):		$(OBJS)
-				$(CXX) $(OBJS) -o $(NAME)
+				$(CXX) $(OBJS) $(CXXFLAGS) -o $(NAME)
 
 $(DEBUG):		$(OBJS)
-				$(GXX) $(OBJS) -o $(DEBUG)
+				$(GXX) $(OBJS) $(CXXFLAGS) -o $(DEBUG)
 
 all:			$(NAME)
 

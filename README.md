@@ -3,7 +3,7 @@ UQAR
 
 ## [[INF15107-06](http://portail.uqar.ca/course/view.php?id=5466)] Base de données I
 
-| Activité | Date | Etat | |
+| Activité | Date | Etat | Ref. |
 | :----- | -----: | :-----: | :-----: |
 | TP 01 | 14/02/2016 a 10h00 | Rendu | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF15107) |
 | TP 02 | 27/03/2016 a 10h00 | _ | [(link)]() |
@@ -14,7 +14,7 @@ UQAR
 
 ## [[INF11207-06](http://portail.uqar.ca/course/view.php?id=5465)] Programmation orientée objet II
 
-| Activité | Date | Etat | |
+| Activité | Date | Etat | Ref. |
 | :----- | -----: | :-----: | :-----: |
 | TP 01 | 16/02/2016 a 23h59 | Rendu | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP1) |
 | TP 02 | 08/03/2016 a 23h59 | _ | [(link)]() |
@@ -25,7 +25,7 @@ UQAR
 
 ## [[INF36207-06](http://portail.uqar.ca/course/view.php?id=5472)] Sécurité informatique
 
-| Activité | Date | Etat | |
+| Activité | Date | Etat | Ref. |
 | :----- | -----: | :-----: | :-----: |
 | TP 01 | 20/02/2016 a 23h59 | En cours | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF36207/TP1) |
 | TP 02 | 15/03/2016 a 23h59 | _ | [(link)]() |
@@ -37,7 +37,7 @@ UQAR
 
 ## [[INF23107-05](http://portail.uqar.ca/course/view.php?id=5468)] Génie logiciel I
 
-| Activité | Date | Etat | |
+| Activité | Date | Etat | Ref. |
 | :----- | -----: | :-----: | :-----: |
 | TP 01 | 16/02/2016 a 23h59 | En cours | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP1) |
 | TP 02 | 18/03/2016 a 23h59 | _ | [(link)]() |
@@ -48,7 +48,7 @@ UQAR
 
 ## [[INF34207-05](http://portail.uqar.ca/course/view.php?id=5471)] Systèmes d'exploitation
 
-| Activité | Date | Etat | |
+| Activité | Date | Etat | Ref. |
 | :----- | -----: | :-----: | :-----: |
 | TP 01 | (date inconnue) | _ | [(link)]() |
 | TP 02 | (date inconnue) | _ | [(link)]() |

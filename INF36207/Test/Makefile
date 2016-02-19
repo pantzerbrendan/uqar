@@ -14,7 +14,7 @@ SRC			=	./main.cpp
 OBJS		=	$(SRC:.cpp=.o)
 
 #CXXFLAGS	+=	-W -Wall -Wextra
-CXXFLAGS	+=	-std=c++11 -pthread
+CXXFLAGS	+=	-std=c++11
 #CXXFLAGS	+=	-Werror
 #CXXFLAGS	+=	-I$(INCLUDE)
 
@@ -23,7 +23,7 @@ CXXFLAGS	+=	-std=c++11 -pthread
 				$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(NAME):		$(OBJS)
-				$(CXX) $(OBJS) -o $(NAME)
+				$(CXX) $(OBJS) -o $(NAME) -pthread
 
 $(DEBUG):		$(OBJS)
 				$(GXX) $(OBJS) -o $(DEBUG)

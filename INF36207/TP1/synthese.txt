@@ -1,0 +1,78 @@
+                INF36207 Sécurite Informatique
+                     Devoir 01 - Sujet 20
+                        20 février 2016
+
+
+    ELLIE Etienne
+    PANTZER Brendan
+
+
+> Exercice 01:
+    Le chiffrement utilisé est un Nombre de César et on peut alors lire:
+       LESEXTRATERRESTRESDEPEGASEONTUNFAIBLEPOURLECAMEMBERTETLEBRIE
+    Qui peut etre lu plus facilement:
+       LES EXTRATERRESTRES DE PEGASE ONT UN FAIBLE POUR LE CAMEMBERT ET LE BRIE
+
+###############################################################################
+
+> Exercice 02:
+    - Question A :
+        En hashant en MD5 ce qui était contenu dans le fichier texte, nous
+        avons trouvé les correspondances suivantes :
+
+            |               Hash               | Valeur en clair |
+            | -------------------------------- | --------------- |
+            | 06e06b19b0767fa9eac324ff7b862b55 |   anjou         |
+            | 4618ce9962c71d6cd72baca7c64f48bd |   grenades      |
+            | a81db505516fbc98d6cb2b5b25c27eff |   anomaux       |
+            | 3dac72783f355eb5f7204a16e28581aa |   bars          |
+            | 67fe2162edcd031fdb94cee677d71bfc |   enquise       |
+            | 26e06acd9b4ff54789a3d4fa28368ed6 |   epieuses      |
+            | cca1e5130e25c6aa1734899fd989db8f |   tiquetee      |
+            | 664c0555fa58ce3438297f25b42e7d25 |   crecher       |
+            | a5025fa7e30f04e9257396b4bb7106ca |   frenaies      |
+            | 08535dd077e347a53c5259e635b101d4 |   detaxer       |
+            | -------------------------------- | --------------- |
+
+    - Question B :
+        En utilisant un algorithme de brute-force, générant toutes les chaines
+        de caracteres de 1 a 8 caracteres avec l'alphabet donnné; puis en les
+        hashant en MD5 et en les comparant aux hashs, nous avons trouvé les
+        correspondances suivantes (nous en avons trouvé 4, mais 3 font parties
+        de ceux qui ont été trouvés dans la question A):
+
+            |               Hash               | Valeur en clair |
+            | -------------------------------- | --------------- |
+            | 4bf7c505cae6a66960c23e27f807d887 |   s@41s         |
+            | -------------------------------- | --------------- |
+
+###############################################################################
+
+> Exercice 03:
+    On peut dire que plus le mot de passe est long, plus le temps que met un
+    algorithme brute-force pour en trouver un est long. De plus, on peut
+    également dire que plus l'alphabet autorisé pour le mot de passe est long
+    (beaucoup de caracteres différents), plus l'algorithme mettra de temps.
+    Ainsi, si on combine le fait qu'un mot de passe et l'alphabet autorisé
+    doivent etre long, un algorithme brute-force mettra plus de temps pour
+    trouver un mot de passe.
+
+    Si on combine, une méthode pour hasher la chaine représentant le mot de
+    passe, l'algorithme devra faire plus de calculs a chaque itération,
+    puisqu'apres avoir genéré la chaine a tester, il devra la hasher et la
+    comparer avec un des hash qu'il possede.
+
+        Suite a la question 02, on a pu constater qu'avec un alphabet de 48
+        caracteres, il a fallu plus de 15 heures pour trouver 4 mots de passe
+        bien que l'on soit limités dans la taille des mots de passes (entre 1 et
+        8 caracteres).
+
+    On peut donc en déduire que pour avoir un mot de passe sécuritaires,
+    l'alphabet doit etre long, le mot de passe d'une taille minimale et que
+    l'on doit utiliser une methode de hashage sur une taille de mots élevée
+    (ex. SHA-256 ou SHA-512).
+    De plus l'alphabet n'a pas forcément besoin d'etre composé de caracteres
+    spéciaux, mais peut simplement etre composé de l'alphabet minuscule et
+    majuscule, ainsi que des nombres. Dans ce cas, aucune contrainte sur la
+    "forme" du mot de passe n'a besoin d'etre appliquée, mis a part la taille
+    du mot de passe.

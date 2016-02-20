@@ -3,32 +3,31 @@ RM			=	rm -vf
 CXX			=	g++
 GXX			=	g++ -g
 
-INCLUDE		=	./include
-SOURCE		=	./source
+#INCLUDE		=	./include
+#SOURCE		=	./source
 
-NAME		=	INF36207_Q2B
-DEBUG		=	INF36207_Q2B_debug
+NAME		=	generator
+DEBUG		=	generator_debug
 
-SRC			=	$(SOURCE)/main.cpp \
-				$(SOURCE)/Configuration.cpp \
-				$(SOURCE)/sys/Thread.cpp
+SRC			=	./main.cpp \
+				./MD5.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 
-CXXFLAGS	+=	-W -Wall -Wextra
-CXXFLAGS	+=	-std=c++11 -lpthread
+#CXXFLAGS	+=	-W -Wall -Wextra
+CXXFLAGS	+=	-std=c++11 -O3
 #CXXFLAGS	+=	-Werror
-CXXFLAGS	+=	-I$(INCLUDE)
+#CXXFLAGS	+=	-I$(INCLUDE)
 
 
 %.o : 			%.cpp
 				$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 $(NAME):		$(OBJS)
-				$(CXX) $(OBJS) $(CXXFLAGS) -o $(NAME)
+				$(CXX) $(OBJS) -o $(NAME) -pthread -O3
 
 $(DEBUG):		$(OBJS)
-				$(GXX) $(OBJS) $(CXXFLAGS) -o $(DEBUG)
+				$(GXX) $(OBJS) -o $(DEBUG) -lpthread -O3
 
 all:			$(NAME)
 

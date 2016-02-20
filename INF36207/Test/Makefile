@@ -9,7 +9,8 @@ GXX			=	g++ -g
 NAME		=	generator
 DEBUG		=	generator_debug
 
-SRC			=	./main.cpp
+SRC			=	./main.cpp \
+				./MD5.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 
@@ -26,7 +27,7 @@ $(NAME):		$(OBJS)
 				$(CXX) $(OBJS) -o $(NAME) -pthread
 
 $(DEBUG):		$(OBJS)
-				$(GXX) $(OBJS) -o $(DEBUG)
+				$(GXX) $(OBJS) -o $(DEBUG) -lpthread
 
 all:			$(NAME)
 

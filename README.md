@@ -9,7 +9,7 @@ UQAR
 | TP 02 | 07/03/2016 | 27/03/2016 a 10h00 | En cours | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF15107/TP2) | _ |
 | TP 03 | 04/03/2016 | 17/04/2016 a 10h00 | _ | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF15107/TP3) | _ |
 | | | | | |
-| Examen intra | 22/02/2016 à 08h00 | _ | _ | _ | X |
+| Examen intra | 22/02/2016 à 08h00 | _ | Rendu | _ | X |
 | Examen final | 25/04/2016 à 08h00 | _ | _ | _ | X |
 
 ## [[INF11207-06](http://portail.uqar.ca/course/view.php?id=5465)] Programmation orientée objet II

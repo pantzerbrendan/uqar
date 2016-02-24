@@ -17,7 +17,7 @@ UQAR
 | Activité | Date énoncé | Date rendu | Etat | Ref. | Résultat |
 | :----- | :-----: | :-----: | :-----: | :-----: | :---: |
 | TP 01 | 26/01/2016 | 16/02/2016 à 23h59 | Rendu | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP1) | _ |
-| TP 02 | 23/02/2016 | 08/03/2016 à 23h59 | _ | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP2) | _ |
+| TP 02 | 23/02/2016 | 08/03/2016 à 23h59 | En cours | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP2) | _ |
 | TP 03 | 22/03/2016 | 05/04/2016 à 23h59 | _ | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP3) | _ |
 | | | | | |
 | Examen intra | 08/03/2016 à 19h15 | _ | _ | _ | X |

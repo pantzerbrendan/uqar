@@ -71,7 +71,7 @@ Tous les comptes permettent de savoir combien d'argent se trouve encore dessus.
 *  dépôt, retrait, affichage du solde
 * gestion de persistance des données (sauvegarde a la fin du programme + lecture au démarrage)
 
-> 2 points : Comment ferait-on pour passer la hiérarchie de classes par une seule classe paramétrisée (template) + donner squelette de la classe. Comparer les deux et dire ce qui paraît le plus adéquat : clarté, facilité de maintenance, ... . Et dire pourquoi.
+> 2 points : Comment ferait-on pour passer la hiérarchie de classes par une seule classe paramétrisée (template) + donner squelette de la classe. Comparer les deux et dire ce qui paraît le plus adéquat : clarté, facilité de maintenance, ... Et dire pourquoi.
 
 ### Répartition du travail :
 

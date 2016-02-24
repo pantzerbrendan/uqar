@@ -44,6 +44,7 @@ int main()
 	** permettant d'initialiser l'objet.
     */
 	MyClass *obj2 = Factories::Factory::newObject<MySecondClass, MyEnum>(B, "str");
+	
 	return (0);
 }
 
@@ -57,13 +58,13 @@ Ce qui équivaut à :
 int main()
 {
 	// On instancie un objet de type MySecondClass sans paramètre.
-	MyClass *obj = Factories::MySecondFactory::newObject("str");
+	MyClass *obj1 = Factories::MySecondFactory::newObject("str");
 
 	/*
     ** On instancie un objet de type MySecondClass avec un paramètre
 	** permettant de l'initialiser.
     */
-    MyClass *obj = Factories::MySecondFactory::newObject("str");
+    MyClass *obj2 = Factories::MySecondFactory::newObject("str");
 
 	return (0);
 }

@@ -12,21 +12,22 @@ Les commandes `make`, `make all` et `make INF11207TP2` ne fonctionneront probabl
 Les sources compilées en mode DEBUG sont suffixées par `_debug.o` et les sources qui se sont pas pour le DEBUG sont simplement suffixées par `.o`.
 
 > Lors de l'ajout de nouvelles sources, il faut ajouter le "lien" vers la source dans `SRC` et dans `D_SRC`. Des sources peuvent également être ajoutées uniquement dans `D_SRC`. Exemple :
+
 ```Makefile
-#Release
+## Release
 SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/monfichier.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
-#!Release
+## end of Release section
 
-#Debug
+## Debug
 D_SRC		=	$(SOURCE)/main.cpp \
 				$(SOURCE)/monfichier.cpp \
 				$(SOURCE)/mondebug.cpp
 
 D_OBJS		=	$(D_SRC:.cpp=_debug.o)
-#!Debug
+## end of Debug section
 ```
 
 
@@ -39,7 +40,7 @@ D_OBJS		=	$(D_SRC:.cpp=_debug.o)
 
 ### Répartition du travail :
 
-| Qui? | Partie |
-| :----: | :----: |
-| pantze_b | Factories (interface + factory specifiques) |
-| __ | __ |
+| Qui? | Partie | Etat |
+| :----: | :----: | :----: |
+| pantze_b | Factories (interface + factory specifiques) | En cours |
+| __ | __ | __ |

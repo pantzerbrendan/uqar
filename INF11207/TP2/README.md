@@ -13,20 +13,20 @@ Les sources compilées en mode DEBUG sont suffixées par `_debug.o` et les sourc
 
 > Lors de l'ajout de nouvelles sources, il faut ajouter le "lien" vers la source dans `SRC` et dans `D_SRC`. Des sources peuvent également être ajoutées uniquement dans `D_SRC`. Exemple :
 ```Makefile
-## Release
+#Release
 SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/monfichier.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
-## !Release
+#!Release
 
-## Debug
+#Debug
 D_SRC		=	$(SOURCE)/main.cpp \
 				$(SOURCE)/monfichier.cpp \
 				$(SOURCE)/mondebug.cpp
 
 D_OBJS		=	$(D_SRC:.cpp=_debug.o)
-## !Debug
+#!Debug
 ```
 
 

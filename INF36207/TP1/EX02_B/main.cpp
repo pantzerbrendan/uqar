@@ -16,7 +16,9 @@ void test_string(const std::string &to_test, std::vector<std::string> hashes, st
     for (int index = 0; index < hashes.size(); index++)
     {
 #ifdef DEBUG
+            mtx.lock();
             std::clog << "\033[32m {" << to_test << "} => [" << hash << "]" << "\033[0m" << std::endl;
+            mtx.unlock();
 #endif
         if (hash == hashes[index])
         {

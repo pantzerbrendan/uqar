@@ -39,7 +39,7 @@ UQAR
 
 | Activité | Date énoncé | Date rendu | Etat | Ref. | Résultat |
 | :----- | :-----: | :-----: | :-----: | :-----: | :---: |
-| TP 01 | 20/01/2016 | 16/02/2016 a 23h59 | Rendu | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP1) | _ |
+| TP 01 | 20/01/2016 | 16/02/2016 a 23h59 | Rendu | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP1) | 36.00% |
 | TP 02 | 12/02/2016 (wtf) | 18/03/2016 a 23h59 | En cours ? | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP2) | _ |
 | TP 03 | 18/03/2016 | 15/04/2016 a 23h59 | _ | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP3) | _ |
 | | | | | |

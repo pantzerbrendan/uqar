@@ -40,7 +40,7 @@ D_OBJS		=	$(D_SRC:.cpp=_debug.o)
 
 ### Répartition du travail :
 
-| Qui? | Partie |
-| :----: | :----: |
-| pantze_b | Factories (interface + factory specifiques) |
-| __ | __ |
+| Qui? | Partie | Etat |
+| :----: | :----: | :----: |
+| pantze_b | Factories (interface + factory specifiques) | En cours |
+| __ | __ | __ |

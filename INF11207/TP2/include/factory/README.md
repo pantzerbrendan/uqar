@@ -44,7 +44,7 @@ int main()
 	** permettant d'initialiser l'objet.
     */
 	MyClass *obj2 = Factories::Factory::newObject<MySecondClass, MyEnum>(B, "str");
-	
+
 	return (0);
 }
 
@@ -54,17 +54,17 @@ Ce qui équivaut à :
 #include "factory/SecondFactory.hpp"
 #include "Data.hpp"
 
-/** Les objets sont les m mes que précédemment. */
+/** Les classes sont les mêmes que précédemment. */
 int main()
 {
-	// On instancie un objet de type MySecondClass sans paramètre.
-	MyClass *obj1 = Factories::MySecondFactory::newObject("str");
+	// On instancie un objet de type MySecondClass sans paramètre que le type  créer.
+	MyClass *obj1 = Factories::MySecondFactory::newObject(B);
 
 	/*
-    ** On instancie un objet de type MySecondClass avec un paramètre
-	** permettant de l'initialiser.
+    ** On instancie un objet de type MySecondClass avec un paramètre,
+	** en plus du type, permettant de l'initialiser.
     */
-    MyClass *obj2 = Factories::MySecondFactory::newObject("str");
+    MyClass *obj2 = Factories::MySecondFactory::newObject(B , "str");
 
 	return (0);
 }

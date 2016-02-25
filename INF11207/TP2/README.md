@@ -75,15 +75,15 @@ Tous les comptes permettent de savoir combien d'argent se trouve encore dessus.
 
 ### Répartition du travail :
 
-| Qui? | Partie |
-| :----: | :----: |
-| pantze_b | Factories (interface + factory spécifiques) |
-| __ | Structure des classes de comptes bancaires |
-| __ | Implémentation(retrait, dépôt) [compte normal] |
-| __ | Implémentation(retrait, dépôt) [compte enfant] |
-| __ | Implémentation(retrait, dépôt) [compte retraite] |
-| __ | Génération du compte en fonction du client |
-| __ | Lecture et sauvegarde des données |
-| __ | Gestion du menu |
-| | |
-| __ | Seconde partie (réponse aux questions) |
+| Qui? | Partie | Etat |
+| :----: | :----: | :----: |
+| pantze_b | Factories (interface + factory spécifiques) | En cours |
+| __ | Structure des classes de comptes bancaires |  |
+| __ | Implémentation(retrait, dépôt) [compte normal] |  |
+| __ | Implémentation(retrait, dépôt) [compte enfant] |  |
+| __ | Implémentation(retrait, dépôt) [compte retraite] |  |
+| __ | Génération du compte en fonction du client |  |
+| __ | Lecture et sauvegarde des données |  |
+| __ | Gestion du menu |  |
+| | | |
+| __ | Seconde partie (réponse aux questions) |  |

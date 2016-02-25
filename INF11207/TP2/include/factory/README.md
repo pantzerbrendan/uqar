@@ -1,6 +1,8 @@
 Factories
 ========
 
+# Non fonctionnel pour le moment
+
 ### Informations
 
 Afin d'utiliser les `Factory` pour instancier dynamiquement des objets, utiliser la méthode statique :

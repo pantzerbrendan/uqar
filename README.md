@@ -43,7 +43,7 @@ UQAR
 | TP 02 | 12/02/2016 | 18/03/2016 à 23h59 | En cours ? | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP2) | _ |
 | TP 03 | 18/03/2016 | 15/04/2016 à 23h59 | _ | [(link)](https://github.com/pantzerbrendan/uqar/tree/master/INF23107/TP3) | _ |
 | | | | | |
-| Examen intra | 24/02/2016 à 16h15 | _ | _ | _ | X |
+| Examen intra | 24/02/2016 à 16h15 | _ | Rendu | _ | X |
 | Examen final | 27/04/2016 à 16h15 | _ | _ | _ | X |
 
 ## [[INF34207-05](http://portail.uqar.ca/course/view.php?id=5471)] Systèmes d'exploitation
@@ -54,6 +54,6 @@ UQAR
 | TP 02 | (date inconnue) | (date inconnue) | Rendu | [(link)]() | _ |
 | TP 03 | (date inconnue) | (date inconnue) | _ | [(link)]() | _ |
 | | | | | |
-| Examen intra 01 | 25/02/2016 à 08h15/09h00 | _ | _ | _ | X |
+| Examen intra 01 | 25/02/2016 à 08h15/09h00 | _ | Rendu | _ | X |
 | Examen intra 02 | 30/03/2016 à 08h15/09h00 | _ | _ | _ | X |
 | Examen final | 27/04/2016 à 08h15/09h00 | _ | _ | _ | X |

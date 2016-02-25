@@ -4,7 +4,7 @@
 
 typedef enum { FIRST } e_NAME;
 
-namespace Factory
+namespace Factories
 {
 
     class Factory {
@@ -18,9 +18,9 @@ namespace Factory
         ** EnumType : Type of the enum used to get the type to return
         */
         template <typename ReturnType, typename EnumType>
-        static ReturnType   *newObject(EnumType type, const std::string &param)
+        static ReturnType   *newObject(EnumType type, const std::string &param = "")
         {
-            return (ReturnType::newInstance(type));
+            return (ReturnType/*Factory*/::newObject(type, param));
         };
 
         /* PROTOTYPE OF THE FUNCTION THAT HAS TO BE IMPLEMENTED EVERYTIME IN

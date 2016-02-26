@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <time.h>
 
+#include "factory/Factory.hpp"
+
 // mettre ailleurs
 static std::string  getCurrentTime()
 {

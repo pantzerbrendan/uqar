@@ -1,73 +1,50 @@
 Factories
 ========
 
-# Non fonctionnel pour le moment
-
 ### Informations
 
 Afin d'utiliser les `Factory` pour instancier dynamiquement des objets, utiliser la méthode statique :
 ```c++
-template<typename ReturnType, typename EnumType>
-ReturnType	*newObject(EnumType type, const std::string &param = "");
+template<typename FactoryName, typename EnumType>
+FactoryBaseType	*newObject(EnumType type, const std::string &params = "");
 ```
 
-Cette méthode, en fonction de l'enum, appelle une autre méthode d'une classe Factory. Cette autre méthode peut également être appelée sans passer par celle-ci.
+Cette méthode, en fonction du nom de la Factory (FactoryName), appelle la methode (statique elle aussi) de cette Factory permettant de créer une instance d'objet. Cette autre méthode peut également être appelée sans passer par celle-ci.
+NB. Les objets crées au travers de la Factory doivent hériter de la classe `FactoryBaseType`. Toute Factory doit faire partie du namespace `Factories`.
+
+Utiliser la méthode suivante permet de créer un nouvel objet de type `FactoryBaseType` [(FactoryBaseType.hpp)](./FactoryBaseType.hpp)
+```c++
+FactoryBaseType	*newObject();
+```
 
 ### Utilisation
 
-```c++
-// Data.hpp
+```{c++, count_lines}
+// data.hpp
+#include "factory/FactoryBaseType.hpp"
 
 /* on définit un enum à utiliser. */
 typedef enum { A, B, C } MyEnum;
 
-/* on définit la classe mère. */
-class MyClass { ... };
-
-/* on définit la classe fille. */
-class MySecondClass : public MyClass { ... };
+/* on définit la classe  */
+class MyClass : public Factories::FactoryBaseType { ... };
 ```
 
-```c++
+```{c++, count_lines}
+// main.cpp
 #include "factory/Factory.hpp"
-#include "Data.hpp"
+#include "data.hpp" // code ci-dessus
 
 int main()
 {
-	/*
-    ** on instancie un objet de type MySecondClass, héritant de MyClass à
-	** l'aide de la Factory en ne passant que l'enum en paramètre.
-    */
-	MyClass *obj1 = Factories::Factory::newObject<MySecondClass, MyEnum>(B);
+	/* Création de l'objet sans autre paramètre que l'enum */
+	MyClass *obj1 = Factories::Factory::newObject<Factories::MyClassFactory, MyEnum>(A);
 
-	/*
-    ** on instancie un objet de type MySecondClass, héritant de MyClass à
-	** l'aide de la Factory en passant l'enum en paramètre et une chaine
-	** permettant d'initialiser l'objet.
-    */
-	MyClass *obj2 = Factories::Factory::newObject<MySecondClass, MyEnum>(B, "str");
+	/* Création de l'objet avec un second paramètre pour l'initialiser */
+	MyClass *obj2 = Factories::Factory::newObject<Factories::MyClassFactory, MyEnum>(A, "str");
 
-	return (0);
-}
-
-```
-Ce qui équivaut à :
-```c++
-#include "factory/SecondFactory.hpp"
-#include "Data.hpp"
-
-/** Les classes sont les mêmes que précédemment. */
-int main()
-{
-	// On instancie un objet de type MySecondClass sans paramètre que le type  créer.
-	MyClass *obj1 = Factories::MySecondFactory::newObject(B);
-
-	/*
-    ** On instancie un objet de type MySecondClass avec un paramètre,
-	** en plus du type, permettant de l'initialiser.
-    */
-    MyClass *obj2 = Factories::MySecondFactory::newObject(B , "str");
-
+	delete obj1;
+	delete obj2;
 	return (0);
 }
 ```

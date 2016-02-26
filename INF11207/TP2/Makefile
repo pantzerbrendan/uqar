@@ -10,27 +10,29 @@ NAME		=	INF11207TP2
 DEBUG		=	INF11207TP2_debug
 
 ## Release
-SRC			=	$(SOURCE)/main.cpp
+SRC			=	$(SOURCE)/main.cpp \
+				$(SOURCE)/factory/Factory.cpp \
+				$(SOURCE)/factory/FactoryBaseType.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release
 
 ## Debug
-D_SRC		=	$(SOURCE)/main.cpp
+D_SRC		=	$(SRC)
 
 D_OBJS		=	$(D_SRC:.cpp=_debug.o)
 ## !Debug
 
 CXXFLAGS	+=	-W -Wall -Wextra
 CXXFLAGS	+=	-std=c++11 -O3
-CXXFLAGS	+=	-I$(INCLUDE)
+LDFLAGS		+=	-I$(INCLUDE)
 
 
 %.o : 			%.cpp
-				$(CXX) $(CXXFLAGS) -c -o $@ $<
+				$(CXX) $(LDFLAGS) -c -o $@ $<
 
 %_debug.o : 	%.cpp
-				$(CXX) $(CXXFLAGS) -c -o $@ $<
+				$(CXX) $(LDFLAGS) -c -o $@ $<
 
 $(NAME):		CXXFLAGS += -Werror
 $(NAME):		$(OBJS)

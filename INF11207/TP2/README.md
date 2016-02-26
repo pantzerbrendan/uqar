@@ -4,14 +4,14 @@ INF11207 - TP2
 Date d'énoncé : 23/02/2016
 Date de rendu : 08/03/2016 à 23h59
 
-### Informations en rapport avec le [Makefile](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP2/Makefile)
+### Informations en rapport avec le [Makefile](./Makefile)
 
 Tant qu'on ne fait pas les compilations pour la préparation au rendu, compiler avec `make debug`.
 Les commandes `make`, `make all` et `make INF11207TP2` ne fonctionneront probablement pas à cause du flag de compilation `-Werror`.
 
 Les sources compilées en mode DEBUG sont suffixées par `_debug.o` et les sources qui se sont pas pour le DEBUG sont simplement suffixées par `.o`.
 
-> Lors de l'ajout de nouvelles sources, il faut ajouter le "lien" vers la source dans `SRC` et dans `D_SRC`. Des sources peuvent également être ajoutées uniquement dans `D_SRC`. Exemple :
+> Lors de l'ajout de nouvelles sources, il faut ajouter le "lien" vers la source uniquement dans `SRC`, elles sont automatiquement ajoutées dans `D_SRC`. Des sources peuvent être ajoutées uniquement dans `D_SRC`. Exemple :
 
 ```Makefile
 ## Release
@@ -22,9 +22,8 @@ OBJS		=	$(SRC:.cpp=.o)
 ## end of Release section
 
 ## Debug
-D_SRC		=	$(SOURCE)/main.cpp \
-				$(SOURCE)/monfichier.cpp \
-				$(SOURCE)/mondebug.cpp
+D_SRC		=	$(SRC) \
+				$(SOURCE)/monfichierdebug.cpp
 
 D_OBJS		=	$(D_SRC:.cpp=_debug.o)
 ## end of Debug section
@@ -32,7 +31,7 @@ D_OBJS		=	$(D_SRC:.cpp=_debug.o)
 
 
 ### Sujet :
-[![pdf_icon](http://www.chambery-tourisme.com/wp-content/uploads/cache//noeStarter/images/50__50__auto__~wp-content~themes~chambery~images~icons~pdf.png) Sujet_TP2_INF11207.pdf](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP2/sujet.pdf)
+[![pdf_icon](http://www.chambery-tourisme.com/wp-content/uploads/cache//noeStarter/images/50__50__auto__~wp-content~themes~chambery~images~icons~pdf.png) Sujet_TP2_INF11207.pdf](./sujet.pdf)
 
 ----
 #### Gestion de banque avec des comptes
@@ -64,7 +63,7 @@ Tous les comptes permettent de savoir combien d'argent se trouve encore dessus.
 ----
 > 13 points : Hiérarchie de classes, qui possède :
 
-* menu, similaire à celui du [TP1](https://github.com/pantzerbrendan/uqar/tree/master/INF11207/TP1)
+* menu, similaire à celui du [TP1](../INF11207/TP1)
 * lister les informations d'un compte
 * lister les informations de tous les comptes
 * créer un compte (nom, date de naissance du client (si trop jeune, demander le numéro de compte d'un parent)

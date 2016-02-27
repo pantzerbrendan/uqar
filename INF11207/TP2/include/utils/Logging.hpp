@@ -5,7 +5,7 @@
 #include <map>
 #include <string>
 
-
+/*
 namespace Log {
     typedef enum {
         DEBUG, INFO, WARNING, ERROR, FATAL
@@ -33,5 +33,5 @@ public:
 
 
 };
-
+*/
 #endif /* !LOGGING_HH_ */

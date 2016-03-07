@@ -24,6 +24,9 @@ static std::string  getCurrentTime()
 }
 //
 
+/**
+ ** Teste le fonctionnement des classes Accounts
+**/
 void testAccount() {
     RetirementAccount *account = new RetirementAccount(NULL, 1);
     account->deposit(1000.2);

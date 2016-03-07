@@ -5,9 +5,9 @@
 
 class ChildAccount : public A_Account {
 private:
-    int     _idParent;
+    u_int     _idParent;
 public:
-    ChildAccount (arguments);
+    ChildAccount (u_int idParent, User *owner, u_int id);
     virtual ~ChildAccount ();
 
     double      withdrawal(const double amount);

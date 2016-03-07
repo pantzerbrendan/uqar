@@ -12,7 +12,11 @@ DEBUG		=	INF11207TP2_debug
 ## Release
 SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/factory/Factory.cpp \
-				$(SOURCE)/factory/FactoryBaseType.cpp
+				$(SOURCE)/factory/FactoryBaseType.cpp \
+				$(SOURCE)/Accounts/A_Account.cpp \
+				$(SOURCE)/Accounts/RegularAccount.cpp \
+				$(SOURCE)/Accounts/RetirementAccount.cpp \
+				$(SOURCE)/Accounts/ChildAccount.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release

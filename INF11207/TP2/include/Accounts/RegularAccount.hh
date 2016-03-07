@@ -7,7 +7,7 @@ class RegularAccount : public A_Account {
 private:
     /* data */
 public:
-    RegularAccount (arguments);
+    RegularAccount (User *owner, u_int id);
     virtual ~RegularAccount ();
 };
 

@@ -2,6 +2,8 @@
 #ifndef FACTORYBASETYPE_HPP_
 #define FACTORYBASETYPE_HPP_
 
+#include <string>
+
 namespace Factories
 {
 

@@ -9,7 +9,7 @@ class User {
 private:
     std::string     _firstname;
     std::string     _lastname;
-    Date            *_birthdate;
+    //Date            *_birthdate;
 
 public:
     User();

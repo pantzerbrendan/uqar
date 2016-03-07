@@ -15,6 +15,8 @@ double          A_Account::getBalance() const {
 }
 
 double          A_Account::withdrawal(const double amount) {
+    if (amount < 0)
+        throw std::string("Ammount can't be negative");
     if ((this->_balance - amount) < 0)
         throw std::string("Insufficient funds");
     this->_balance -= amount;
@@ -22,5 +24,7 @@ double          A_Account::withdrawal(const double amount) {
 }
 
 void            A_Account::deposit(const double amount) {
+    if (amount < 0)
+        throw std::string("Ammount can't be negative");
     this->_balance += amount;
 }

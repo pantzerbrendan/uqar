@@ -12,6 +12,8 @@
 #include "Accounts/RetirementAccount.hh"
 #include "utils/Date.hpp"
 
+#include "Application.hpp"
+
 // mettre ailleurs
 static std::string  getCurrentTime()
 {
@@ -62,6 +64,12 @@ int main(int ac, char **av, char **env)
 
     // testDate();
     // testAccount();
+
+    Application *app = new Application();
+
+    app->start();
+    app->loop();
+    delete app;
 
     (void)ac;
     (void)av;

@@ -9,7 +9,7 @@ namespace Factories
 
     class FactoryBaseType
     {
-    private:
+    protected:
         std::string _typename;
 
     public:

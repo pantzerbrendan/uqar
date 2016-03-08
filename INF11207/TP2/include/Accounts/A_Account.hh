@@ -7,7 +7,7 @@
 typedef unsigned int u_int;
 
 class A_Account : public Factories::FactoryBaseType {
-private:
+protected:
   u_int     _id;
   User      *_owner;
   double    _balance;

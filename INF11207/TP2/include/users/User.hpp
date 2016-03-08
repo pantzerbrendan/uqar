@@ -3,13 +3,13 @@
 #define USER_HPP_
 
 #include <string>
-#include "Date.hpp"
+#include "utils/Date.hpp"
 
 class User {
 private:
     std::string     _firstname;
     std::string     _lastname;
-    //Date            *_birthdate;
+    Date            *_birthdate;
 
 public:
     User();

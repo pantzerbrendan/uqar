@@ -16,7 +16,8 @@ SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/Accounts/A_Account.cpp \
 				$(SOURCE)/Accounts/RegularAccount.cpp \
 				$(SOURCE)/Accounts/RetirementAccount.cpp \
-				$(SOURCE)/Accounts/ChildAccount.cpp
+				$(SOURCE)/Accounts/ChildAccount.cpp \
+				$(SOURCE)/utils/Date.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release

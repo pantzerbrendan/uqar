@@ -10,6 +10,7 @@
 
 #include "factory/Factory.hpp"
 #include "Accounts/RetirementAccount.hh"
+#include "utils/Date.hpp"
 
 // mettre ailleurs
 static std::string  getCurrentTime()
@@ -47,12 +48,19 @@ void testAccount() {
     delete(account);
 }
 
+void testDate() {
+    Date *date = new Date("1992-03-04");
+    std::cout << date->getDate() << std::endl;
+    delete(date);
+}
+
 int main(int ac, char **av, char **env)
 {
     #ifdef DEBUG
     std::clog << getCurrentTime() << " [" << __FUNCTION__ << " (" << __FILE__ << ")] start" << std::endl;
     #endif
 
+    // testDate();
     // testAccount();
 
     (void)ac;

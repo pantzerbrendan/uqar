@@ -3,8 +3,20 @@
 #define APPLICATION_HPP_
 
 #include <string>
+#include "Commands.hpp"
 
-typedef enum { EXIT, HELP, ERROR } Command;
+typedef enum {
+    EXIT,
+    HELP,
+    LIST,
+    ADD,
+    EDIT,
+    REMOVE,
+    WITHDRAW,
+    DEPOSIT,
+    CLEAR,
+    ERROR
+} Command;
 
 class Application
 {

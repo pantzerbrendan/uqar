@@ -28,3 +28,8 @@ void            A_Account::deposit(const double amount) {
         throw std::string("Ammount can't be negative");
     this->_balance += amount;
 }
+
+const std::string &A_Account::getFormat() const
+{
+    return (this->_format);
+}

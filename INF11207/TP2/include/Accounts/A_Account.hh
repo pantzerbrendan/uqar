@@ -12,6 +12,8 @@ protected:
   User      *_owner;
   double    _balance;
 
+  std::string   _format;
+
 public:
   A_Account (User *owner, u_int id);
   virtual ~A_Account ();
@@ -19,6 +21,7 @@ public:
   double            getBalance() const;
   virtual double    withdrawal(const double amount);
   virtual void      deposit(const double amount);
+  const std::string &getFormat() const;
 };
 
 #endif /* !AACCOUNT_HH_ */

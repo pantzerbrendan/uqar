@@ -50,7 +50,7 @@ void    Application::execute()
             std::cerr << "Commande invalide" << std::endl;
             break;
         case LIST:
-            list(this);
+            list_accounts(this);
             break;
         case ADD:
             add(this);

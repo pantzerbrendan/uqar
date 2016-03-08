@@ -4,10 +4,13 @@
 
 #include "Application.hpp"
 
-void        list(Application *app);
-void        add(Application *app);
-void        edit(Application *app);
-void        deposit(Application *app);
-void        withdraw(Application *app);
+class Application;
+
+void    list_accounts(Application *);
+void    add(Application *);
+void    edit(Application *);
+void    deposit(Application *);
+void    withdraw(Application *);
+void    save(Application *);
 
 #endif /* !COMMANDS_HPP_ */

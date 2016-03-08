@@ -1,7 +1,7 @@
 
 #include "Commands.hpp"
 
-void        list(Application *app)
+void        list_accounts(Application *app)
 {
-    
+
 }

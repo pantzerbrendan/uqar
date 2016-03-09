@@ -20,6 +20,7 @@ typedef enum {
     WITHDRAW,
     DEPOSIT,
     CLEAR,
+    SAVE,
     ERROR,
     CMD_NBR
 } Command;
@@ -43,7 +44,9 @@ public:
     void        start();
     void        loop();
     void        stop();
-    void        help();
+
+    u_int       maxAID() const;
+    Bank        *getBank() const;
 };
 
 #endif /* !APPLICATION_HPP_ */

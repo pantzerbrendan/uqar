@@ -15,6 +15,9 @@ private:
 public:
     Bank();
     ~Bank();
+
+    u_int       maxAID() const;
+    std::list<A_Account *>  getAccounts() const;
 };
 
 #endif /* !BANK_HPP_ */

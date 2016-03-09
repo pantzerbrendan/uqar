@@ -14,6 +14,7 @@ Command     getCommand(const std::string &param)
     else if (param == "clear") return (CLEAR);
     else if (param == "remove") return (REMOVE);
     else if (param == "deposit") return (DEPOSIT);
+    else if (param == "save") return (SAVE);
     return (ERROR);
 }
 
@@ -53,14 +54,5 @@ void    Application::loop()
     }
 }
 
-void    Application::help()
-{
-    std::cout << "Liste des commandes :" << std::endl;
-    std::cout << "  - list" << std::endl;
-    std::cout << "  - add" << std::endl;
-    std::cout << "  - edit" << std::endl;
-    std::cout << "  - deposit" << std::endl;
-    std::cout << "  - withdraw" << std::endl;
-    std::cout << "  - exit" << std::endl;
-    std::cout << "  - help" << std::endl;
-}
+u_int       Application::maxAID() const { return this->_bank->maxAID(); }
+Bank        *Application::getBank() const { return this->_bank; }

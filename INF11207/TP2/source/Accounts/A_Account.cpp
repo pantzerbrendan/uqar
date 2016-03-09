@@ -33,3 +33,6 @@ const std::string &A_Account::getFormat() const
 {
     return (this->_format);
 }
+
+u_int           A_Account::getId() const { return (this->_id); }
+User            *A_Account::getOwner() const { return (this->_owner); };

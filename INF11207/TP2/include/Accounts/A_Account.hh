@@ -22,6 +22,8 @@ public:
   virtual double    withdrawal(const double amount);
   virtual void      deposit(const double amount);
   const std::string &getFormat() const;
+  u_int             getId() const;
+  User              *getOwner() const;
 };
 
 #endif /* !AACCOUNT_HH_ */

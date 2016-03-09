@@ -31,60 +31,68 @@ static AccountEnum getAccountType(const std::string &str)
     else if (str == "Retraite") return RETIREMENT;
 }
 
-void    Commands::list_accounts(Application *app)
+void    Commands::add(Application *app)
 {
-
-}
-
-void    Commands::add(Application *)
-{
-    bool    mode = getMode("Ajouter un utilisateur(1) ou un compte(2) ? [1/2] : ");
-    if (mode) // ajout d'un utilisateur
+    try
     {
-        std::string firstname = prompt("Prenom : ");
-        std::string lastname = prompt("Nom : ");
-        Date *birthdate = new Date(prompt("Date de naissance [YYYY-MM-DD]: "));
+        bool    mode = getMode("Ajouter un utilisateur(1) ou un compte(2) ? [1/2] : ");
+        if (mode) // ajout d'un utilisateur
+        {
+            std::string firstname = prompt("Prenom : ");
+            std::string lastname = prompt("Nom : ");
+            Date *birthdate = new Date(prompt("Date de naissance [YYYY-MM-DD]: "));
 
-        //User user = new User(firstname, lastname, new Date(birthdate));
-    }
-    else // ajout d'un compte
+            //User user = new User(firstname, lastname, new Date(birthdate));
+        }
+        else // ajout d'un compte
+        {
+            std::string owner_name = prompt("Nom du proprietaire : ");
+            Date *birthdate = new Date(prompt("Date de naissance du proprietaire [YYYY-MM-DD]: "));
+
+            // check age
+            AccountEnum type = getAccountType(prompt("Type du compte [Epargne / Retraite] : "));
+            std::string str;
+            u_int id = app->maxAID();
+            //A_Account *account = Factories::Factory::newObject(, str);
+        }
+    } catch (std::string str)
     {
-        std::string owner_name = prompt("Nom du proprietaire : ");
-        Date *birthdate = new Date(prompt("Date de naissance du proprietaire [YYYY-MM-DD]: "));
-
-        // check age
-        AccountEnum type = getAccountType(prompt("Type du compte [Epargne / Retraite] : "));
-        std::string str;
-        //A_Account *account = Factories::Factory::newObject(, str);
+        std::cerr << str << std::endl;
     }
 }
 
 void    Commands::edit(Application *)
 {
-    bool    mode = getMode("Modifier un utilisateur(1) ou un compte(2) ? [1/2] : ");
-    if (mode) // modification d'un utilisateur
+    try
     {
+        bool    mode = getMode("Modifier un utilisateur(1) ou un compte(2) ? [1/2] : ");
+        if (mode) // modification d'un utilisateur
+        {
 
-    }
-    else // modification d'un compte
+        }
+        else // modification d'un compte
+        {
+
+        }
+    } catch (std::string str)
     {
-
+        std::cerr << str << std::endl;
     }
 }
 
 void    Commands::deposit(Application *)
 {
-
+    std::clog << "Non implemente" << std::endl;
 }
 
 void    Commands::withdraw(Application *)
 {
-
+    std::clog << "Non implemente" << std::endl;
 }
 
 void    Commands::save(Application *)
 {
-
+    std::clog << "Non implemente" << std::endl;
 }
 
 void    Commands::error(Application *app)
@@ -122,4 +130,18 @@ void    Commands::help(Application *app)
 void    Commands::clear(Application *)
 {
     std::cout << "\e[1;1H\e[2J";
+}
+
+void    Commands::list_accounts(Application *app)
+{
+    std::list<A_Account *> accounts = app->getBank()->getAccounts();
+    std::list<A_Account *>::const_iterator iterator = accounts.begin();
+
+    std::cout << "ID | PROPRIETAIRE | SOLDE" << std::endl;
+    for (; iterator != accounts.end(); iterator++)
+    {
+        std::cout << (*iterator)->getId() << " | "
+            << (*iterator)->getOwner()->getFirstname() << " " << (*iterator)->getOwner()->getLastname() << " | "
+            << (*iterator)->getBalance() << std::endl;
+    }
 }

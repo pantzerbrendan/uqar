@@ -12,12 +12,15 @@ Command     getCommand(const std::string &param)
     else if (param == "deposit") return (DEPOSIT);
     else if (param == "withdraw") return (WITHDRAW);
     else if (param == "clear") return (CLEAR);
+    else if (param == "remove") return (REMOVE);
+    else if (param == "deposit") return (DEPOSIT);
     return (ERROR);
 }
 
 Application::Application() : _running(false)
 {
     this->_prompt = "$> ";
+    this->_bank = new Bank();
 
     this->_commands[EXIT] = &Commands::quit;
     this->_commands[HELP] = &Commands::help;

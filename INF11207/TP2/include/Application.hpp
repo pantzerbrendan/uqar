@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include "Commands.hpp"
+#include "data/Bank.hpp"
 
 class Application;
 typedef void (*fct_ptr)(Application *);
@@ -29,6 +30,7 @@ private:
     bool        _running;
     std::string _prompt;
     std::string _input;
+    Bank        *_bank;
 
     fct_ptr     _commands[CMD_NBR];
 

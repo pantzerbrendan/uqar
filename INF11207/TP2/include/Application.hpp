@@ -38,6 +38,8 @@ public:
     Application();
     virtual ~Application();
 
+    std::string getInput() const;
+
     void        start();
     void        loop();
     void        stop();

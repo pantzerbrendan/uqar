@@ -34,6 +34,10 @@ Application::Application() : _running(false)
     this->_commands[ERROR] = &Commands::error;
 }
 
+std::string     Application::getInput() const {
+    return (this->_input);
+}
+
 Application::~Application() {}
 
 void    Application::start() { this->_running = true; }

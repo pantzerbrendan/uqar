@@ -87,9 +87,11 @@ void    Commands::save(Application *)
 
 }
 
-void    Commands::error(Application *)
+void    Commands::error(Application *app)
 {
-
+    std::cerr << "\033[31m" << "Erreur : `";
+    std::cerr << app->getInput() << "` commande non trouvée..." << std::endl;
+    std::cerr << "Tapez la commande `help` pour plus d'informations" << "\033[0m" << std::endl;
 }
 
 void    Commands::remove(Application *)

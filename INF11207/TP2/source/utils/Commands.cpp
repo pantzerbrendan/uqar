@@ -14,12 +14,12 @@ static std::string prompt(const std::string &text)
     return (input);
 }
 
-static bool     getMode()
+static bool     getMode(const std::string &text)
 {
     std::string input = "";
     while (input[0] != '1' && input[0] != '2')
     {
-        std::cout << "Ajouter un utilisateur(1) ou un compte(2) ? [1/2] : ";
+        std::cout << text;
         getline(std::cin, input);
     }
     return (input == "1");
@@ -38,7 +38,7 @@ void    Commands::list_accounts(Application *app)
 
 void    Commands::add(Application *)
 {
-    bool    mode = getMode();
+    bool    mode = getMode("Ajouter un utilisateur(1) ou un compte(2) ? [1/2] : ");
     if (mode) // ajout d'un utilisateur
     {
         std::string firstname = prompt("Prenom : ");
@@ -47,7 +47,7 @@ void    Commands::add(Application *)
 
         //User user = new User(firstname, lastname, new Date(birthdate));
     }
-    else
+    else // ajout d'un compte
     {
         std::string owner_name = prompt("Nom du proprietaire : ");
         Date *birthdate = new Date(prompt("Date de naissance du proprietaire [YYYY-MM-DD]: "));
@@ -61,7 +61,15 @@ void    Commands::add(Application *)
 
 void    Commands::edit(Application *)
 {
+    bool    mode = getMode("Modifier un utilisateur(1) ou un compte(2) ? [1/2] : ");
+    if (mode) // modification d'un utilisateur
+    {
 
+    }
+    else // modification d'un compte
+    {
+
+    }
 }
 
 void    Commands::deposit(Application *)

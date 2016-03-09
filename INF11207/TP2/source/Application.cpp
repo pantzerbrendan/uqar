@@ -45,45 +45,8 @@ void    Application::loop()
     {
         std::cout << this->_prompt;
         getline(std::cin, this->_input);
-        this->execute();
+        this->_commands[getCommand(this->_input)](this);
     }
-}
-
-void    Application::execute()
-{
-    Command cmd = getCommand(this->_input);
-    /*switch (cmd)
-    {
-        case EXIT:
-            this->stop();
-            break;
-        case HELP:
-            this->help();
-            break;
-        case ERROR:
-            std::cerr << "Commande invalide" << std::endl;
-            break;
-        case LIST:
-            list_accounts(this);
-            break;
-        case ADD:
-            add(this);
-            break;
-        case EDIT:
-            edit(this);
-            break;
-        case DEPOSIT:
-            deposit(this);
-            break;
-        case WITHDRAW:
-            withdraw(this);
-            break;
-        case CLEAR:
-            std::cout << "\e[1;1H\e[2J";
-            break;
-        default:
-            break;
-    }*/
 }
 
 void    Application::help()

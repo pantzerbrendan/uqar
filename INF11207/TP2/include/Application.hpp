@@ -42,9 +42,6 @@ public:
     void        loop();
     void        stop();
     void        help();
-
-private:
-    void        execute();
 };
 
 #endif /* !APPLICATION_HPP_ */

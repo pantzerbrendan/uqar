@@ -89,17 +89,27 @@ void    Commands::remove(Application *)
 
 }
 
-void    Commands::quit(Application *)
+void    Commands::quit(Application *app)
 {
-
+    app->stop();
 }
 
-void    Commands::help(Application *)
+void    Commands::help(Application *app)
 {
-
+    std::cout << "Commandes disponibles :" << std::endl;
+    std::cout << "\t- add" << std::endl;
+    std::cout << "\t- edit" << std::endl;
+    std::cout << "\t- remove" << std::endl;
+    std::cout << "\t- list" << std::endl;
+    std::cout << "\t- deposit" << std::endl;
+    std::cout << "\t- withdraw" << std::endl;
+    std::cout << "\t- exit" << std::endl;
+    std::cout << "\t- clear" << std::endl;
+    std::cout << "\t- help" << std::endl;
+    (void)app;
 }
 
 void    Commands::clear(Application *)
 {
-    
+    std::cout << "\e[1;1H\e[2J";
 }

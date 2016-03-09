@@ -38,13 +38,12 @@ public:
     Application();
     virtual ~Application();
 
+    std::string getInput() const;
+
     void        start();
     void        loop();
     void        stop();
     void        help();
-
-private:
-    void        execute();
 };
 
 #endif /* !APPLICATION_HPP_ */

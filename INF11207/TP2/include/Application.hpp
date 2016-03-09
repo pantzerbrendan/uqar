@@ -3,7 +3,11 @@
 #define APPLICATION_HPP_
 
 #include <string>
+#include <map>
 #include "Commands.hpp"
+
+class Application;
+typedef void (*fct_ptr)(Application *);
 
 typedef enum {
     EXIT,
@@ -15,7 +19,8 @@ typedef enum {
     WITHDRAW,
     DEPOSIT,
     CLEAR,
-    ERROR
+    ERROR,
+    CMD_NBR
 } Command;
 
 class Application
@@ -24,6 +29,8 @@ private:
     bool        _running;
     std::string _prompt;
     std::string _input;
+
+    fct_ptr     _commands[CMD_NBR];
 
 public:
     Application();

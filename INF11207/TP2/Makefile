@@ -19,15 +19,8 @@ SRC			=	$(SOURCE)/main.cpp \
 				$(SOURCE)/Accounts/RetirementAccount.cpp \
 				$(SOURCE)/Accounts/ChildAccount.cpp \
 				$(SOURCE)/users/User.cpp \
+				$(SOURCE)/utils/Commands.cpp \
 				$(SOURCE)/data/Bank.cpp \
-				\
-					$(SOURCE)/commands/Add.cpp \
-					$(SOURCE)/commands/Deposit.cpp \
-					$(SOURCE)/commands/Edit.cpp \
-					$(SOURCE)/commands/List.cpp \
-					$(SOURCE)/commands/Save.cpp \
-					$(SOURCE)/commands/Withdraw.cpp \
-				\
 				$(SOURCE)/utils/Date.cpp
 
 OBJS		=	$(SRC:.cpp=.o)

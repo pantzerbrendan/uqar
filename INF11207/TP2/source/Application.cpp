@@ -18,6 +18,17 @@ Command     getCommand(const std::string &param)
 Application::Application() : _running(false)
 {
     this->_prompt = "$> ";
+
+    this->_commands[EXIT] = &Commands::quit;
+    this->_commands[HELP] = &Commands::help;
+    this->_commands[LIST] = &Commands::list_accounts;
+    this->_commands[ADD] = &Commands::add;
+    this->_commands[EDIT] = &Commands::edit;
+    this->_commands[REMOVE] = &Commands::remove;
+    this->_commands[WITHDRAW] = &Commands::withdraw;
+    this->_commands[DEPOSIT] = &Commands::deposit;
+    this->_commands[CLEAR] = &Commands::clear;
+    this->_commands[ERROR] = &Commands::error;
 }
 
 Application::~Application() {}
@@ -38,7 +49,7 @@ void    Application::loop()
 void    Application::execute()
 {
     Command cmd = getCommand(this->_input);
-    switch (cmd)
+    /*switch (cmd)
     {
         case EXIT:
             this->stop();
@@ -69,7 +80,7 @@ void    Application::execute()
             break;
         default:
             break;
-    }
+    }*/
 }
 
 void    Application::help()

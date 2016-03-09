@@ -3,6 +3,7 @@
 #define ACCOUNTFACTORY_HPP_
 
 #include <string>
+#include "Accounts/A_Account.hh"
 
 typedef enum { REGULAR, CHILD, RETIREMENT } AccountEnum;
 
@@ -12,8 +13,8 @@ private:
     virtual ~AccountFactory ();
 
 public:
-    static Account  *newObject(const AccountEnum, const std::string & = "");
-    static Account  *newObject();
+    static A_Account  *newObject(const AccountEnum, const std::string & = "");
+    static A_Account  *newObject();
 
 };
 

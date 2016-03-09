@@ -4,7 +4,22 @@
 
 User::User(const std::string &params)
 {
-    // add data
+    std::istringstream iss(params);
+    std::string tmp;
+    for (int i = 0; std::getline(iss, tmp, ','); i++) {
+        switch (i) {
+            case 0:
+                this->_lastname = tmp;
+                break;
+            case 1:
+                this->_firstname = tmp;
+                break;
+            case 2:
+                this->_birthdate = new Date(tmp);
+            default:
+                break;
+        }
+    }
 
     #ifdef DEBUG
     std::cout << this->_firstname << " " << this->_lastname << " has been created" << std::endl;

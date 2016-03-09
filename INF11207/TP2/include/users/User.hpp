@@ -3,6 +3,8 @@
 #define USER_HPP_
 
 #include <string>
+#include <sstream>
+#include <iostream>
 #include "utils/Date.hpp"
 
 class User

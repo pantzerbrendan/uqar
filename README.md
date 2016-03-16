@@ -20,7 +20,7 @@ UQAR
 | TP 02 | 23/02/2016 | 08/03/2016 à 23h59 | Rendu | [(link)](./INF11207/TP2) | _ |
 | TP 03 | 22/03/2016 | 05/04/2016 à 23h59 | _ | [(link)](./INF11207/TP3) | _ |
 | | | | | |
-| Examen intra | 08/03/2016 à 19h15 | _ | _ | _ | X |
+| Examen intra | 08/03/2016 à 19h15 | _ | Rendu | _ | X |
 | Examen final | 26/04/2016 à 19h15 | _ | _ | _ | X |
 
 ## [[INF36207-06](http://portail.uqar.ca/course/view.php?id=5472)] Sécurité informatique
@@ -32,7 +32,7 @@ UQAR
 | TP 03 | 29/03/2016 | 12/04/2016 à 23h59 | _ | [(link)](./INF36207/TP3) | _ |
 | TP 04 | 12/04/2016 | 26/04/2016 à 23h59 | _ | [(link)](./INF36207/TP4) | _ |
 | | | | | |
-| Examen intra | 15/03/2016 à 16h15 | _ | _ | _ | X |
+| Examen intra | 15/03/2016 à 16h15 | _ | Rendu | _ | X |
 | Examen final | 26/04/2016 à 16h15 | _ | _ | _ | X |
 
 ## [[INF23107-05](http://portail.uqar.ca/course/view.php?id=5468)] Génie logiciel I

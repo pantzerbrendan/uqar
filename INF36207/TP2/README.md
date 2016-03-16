@@ -40,3 +40,6 @@ disons, le réseau de l’université et celui du cafe ?
 | Différence avec un autre réseau | [] |
 | | |
 | Question bonus | [] |
+
+#### Informations supplementaires pour ssh
+[Arch-wiki, ssh#Configuration](https://wiki.archlinux.org/index.php/Secure_Shell#Configuration)

@@ -33,9 +33,9 @@ disons, le réseau de l’université et celui du cafe ?
 | :--- | :---: |
 | Mise en place VM | [x] |
 | SSH acceptant connexions externes + changement du port | [x] |
-| Montrer résultat avec `iptables` | [] |
+| Montrer résultat avec `iptables` | [x] |
 | Forward server X | [x] |
-| Script création tunnel pour service | [] |
+| Script création tunnel pour service | [/] |
 | Faire une carte détaillée du réseau | [] |
 | Différence avec un autre réseau | [] |
 | | |

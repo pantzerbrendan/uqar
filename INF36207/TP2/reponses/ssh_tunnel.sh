@@ -1,10 +1,12 @@
 #!/bin/sh
 
-#ssh_tunnel.sh -local_port 2080 -h[ostname] localhost -distant_port 80 -u utilisateur -host serveurweb.org
-#ssh_tunnel.sh --help
+## des erreurs surviennent a l'execution, ces erreurs sont aux differentes conditions :
+## lignes 33, 38, 43, 48 et 53. Nous ne savons pas a quoi elles sont liees, ni comment les resoudre. 
 
 help () {
-    echo "AIDE"
+    echo "Exemple"
+    echo "./ssh_tunnel.sh [--local_port 2080] [--hostname localhost] [--distant_port 80] [--user utilisateur] [--host serveurweb.org]"
+    echo "./ssh_tunnel.sh [--help]"
 }
 
 local_port=0
@@ -13,38 +15,55 @@ distant_port=0
 user="null"
 host="null"
 
-if [ $# -eq 1 ]; then
-    help
+if [ $# -eq 1 ]
+then
+    if [ $1 = "--help" ]; then
+        help
+    else
+        echo "Mauvais parametre..."
+        echo "Tapez 'ssh_tunnel.sh --help pour plus d'informations"
+    fi
     exit 0
-elif [ $# -eq 10 ]; then
+elif [ $# -eq 10 ]
+then
     count=`expr $# - $#`
-    while [ $count -le $# ]; do
-        if [ $1 = "--local_port" ]; then
+    number=$#
+    while [ $count -le $number ]
+    do
+        if [ $1 = "--local_port" ]
+        then
             shift
             local_port=$1
             count=`expr $count + 1`
-        elif [ $1 = "-h" ] || [ $1 = "--hostname" ]; then
+        elif [ $1 = "--hostname" ]
+        then
             shift
             hostname=$1
             count=`expr $count + 1`
-        elif [ $1 = "--distant_port" ]; then
+        elif [ $1 = "--distant_port" ]
+        then
             shift
             distant_port=$1
             count=`expr $count + 1`
-        elif [ $1 == "--user" ]; then
+        elif [ $1 = "--user" ]
+        then
             shift
             user=$1
             count=`expr $count + 1`
-        elif [ $1 = "--host" ]; then
+        elif [ $1 = "--host" ]
+        then
             shift
             host=$1
             count=`expr $count + 1`
         fi
-        shift
+        if [ $count -lt $number ]
+        then
+            shift
+        fi
         count=`expr $count + 1`
     done
 
-    echo "ssh -L $local_port:$hostname:$distant_port $user@$host"
+    #echo "ssh -L $local_port:$hostname:$distant_port $user@$host"
     ssh -L $local_port:$hostname:$distant_port $user@$host
 
 else

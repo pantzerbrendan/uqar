@@ -19,3 +19,8 @@ Refaire cette application, mais en utilisant cette fois ci la memoire partagee
 |  | Client | En cours |
 |  | Serveur |  |
 |  |  |  |
+
+### Liens utiles
+
+[Sockets en C et C++](http://www.linuxhowtos.org/C_C++/socket.htm)
+[Sockets avec memoire partagee en C et C++](http://www.picklingtools.com/html/shm.html)

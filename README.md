@@ -28,7 +28,7 @@ UQAR
 | Activité | Date énoncé | Date rendu | Etat | Ref. | Résultat |
 | :----- | :-----: | :-----: | :-----: | :-----: | :---: |
 | TP 01 | 09/02/2016 | 20/02/2016 à 23h59 | Rendu | [(link)](./INF36207/TP1) | 100.00% |
-| TP 02 | 08/03/2016 | 15/03/2016 à 23h59 | En cours | [(link)](./INF36207/TP2) | _ |
+| TP 02 | 08/03/2016 | 15/03/2016 à 23h59 | Rendu | [(link)](./INF36207/TP2) | _ |
 | TP 03 | 29/03/2016 | 12/04/2016 à 23h59 | _ | [(link)](./INF36207/TP3) | _ |
 | TP 04 | 12/04/2016 | 26/04/2016 à 23h59 | _ | [(link)](./INF36207/TP4) | _ |
 | | | | | |
@@ -52,7 +52,7 @@ UQAR
 | :----- | :-----: | :-----: | :-----: | :-----: | :---: |
 | TP 01 | (date inconnue) | (date inconnue) | Rendu | [(link)]() | _ |
 | TP 02 | (date inconnue) | (date inconnue) | Rendu | [(link)]() | _ |
-| TP 03 | (date inconnue) | (date inconnue) | _ | [(link)]() | _ |
+| TP 03 | (date inconnue) | (date inconnue) | En cours | [(link)]() | _ |
 | | | | | |
 | Examen intra 01 | 25/02/2016 à 08h15/09h00 | _ | Rendu | _ | X |
 | Examen intra 02 | 30/03/2016 à 08h15/09h00 | _ | _ | _ | X |

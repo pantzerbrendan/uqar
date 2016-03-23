@@ -13,7 +13,7 @@ NAME		=	INF34207TP1_server
 DEBUG		=	INF34207TP1_server_debug
 
 ## Release
-SRC			=	$(SOURCE)/main.cpp
+SRC			=	$(LOCAL_SRC)/main.cpp
 
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release

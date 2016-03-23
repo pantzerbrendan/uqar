@@ -1,5 +1,6 @@
 
-#include "INF34207_client.hpp"
+#include <stdlib.h>
+#include "INF34207_server.hpp"
 
 int main(int ac, char **av, char **env)
 {

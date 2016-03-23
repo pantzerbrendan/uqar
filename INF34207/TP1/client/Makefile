@@ -13,8 +13,9 @@ NAME		=	INF34207TP1_client
 DEBUG		=	INF34207TP1_client_debug
 
 ## Release
-SRC			=	$(SOURCE)/main.cpp
-
+SRC			=	$(LOCAL_SRC)/main.cpp \
+				$(COMMON_SRC)/Parameters.cpp
+				
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release
 

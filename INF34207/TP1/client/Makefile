@@ -14,7 +14,8 @@ DEBUG		=	INF34207TP1_client_debug
 
 ## Release
 SRC			=	$(LOCAL_SRC)/main.cpp \
-				$(COMMON_SRC)/Parameters.cpp
+				$(COMMON_SRC)/Parameters.cpp \
+				$(COMMON_SRC)/Environment.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
 ## !Release

@@ -4,22 +4,24 @@
 
 #include <list>
 #include <string>
-// #include "Environment.hpp" // ./
 
-typedef std::list<std::string>  s_list;
+#include "typos.h"
+#include "Environment.hpp" // ./
 
 class Parameters
 {
 private:
     int             _argcount;
     s_list          _argvalues;
-    // Environment     *_env;
+    Environment     *_env;
 
 public:
     Parameters(int, char **, char **);
     ~Parameters();
 
-    // Environment     *getEnvironment() const;
+    Environment     *getEnvironment() const;
+    const std::string   values(const int) const;
+    int                 count() const;
 };
 
 #endif /* !PARAMETERS_HPP_ */

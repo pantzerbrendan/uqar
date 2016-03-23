@@ -3,6 +3,9 @@ ECHO	=	echo
 RM		=	rm -fv
 LN		=	ln -svf
 MAKE	=	make -C
+CLEAN	=	make clean -C
+FCLEAN	=	make fclean -C
+M_DEBUG	=	make debug -C
 
 CLIENT	=	./client
 SERVER	=	./server
@@ -26,10 +29,10 @@ $(NAME):
 
 $(DEBUG):
 			@$(ECHO) "\033[33m[DEBUG]\t\tCompiling client <"$(CLIENT)">\033[0m"
-			@$(MAKE) debug $(CLIENT)
+			@$(M_DEBUG) $(CLIENT)
 			@$(ECHO) ""
 			@$(ECHO) "\033[33m[DEBUG]\t\tCompiling server <"$(SERVER)">\033[0m"
-			@$(MAKE) debug $(SERVER)
+			@$(M_DEBUG) $(SERVER)
 			@$(ECHO) ""
 			@$(ECHO) "\033[33m[DEBUG]\t\tCreating symlinks\033[0m"
 			@$(LN) $(CLIENT)/$(CLIENT_BIN)_debug .
@@ -41,17 +44,17 @@ debug:		$(DEBUG)
 
 clean:
 			@$(ECHO) "\033[33m[CLEAN]\tCleaning client (removes all *.o files)\033[0m"
-			@$(MAKE)  clean $(CLIENT)
+			@$(CLEAN) $(CLIENT)
 			@$(ECHO) ""
 			@$(ECHO) "\033[33m[CLEAN]\tCleaning client (removes all *.o files)\033[0m"
-			@$(MAKE)  clean $(SERVER)
+			@$(CLEAN) $(SERVER)
 
 fclean:
 			@$(ECHO) "\033[33m[FCLEAN]\tForce-cleaning client (removes all binary files)\033[0m"
-			@$(MAKE)  fclean $(CLIENT)
+			@$(FCLEAN) $(CLIENT)
 			@$(ECHO) ""
 			@$(ECHO) "\033[33m[FCLEAN]\tForce-cleaning client (removes all binary files)\033[0m"
-			@$(MAKE)  fclean $(SERVER)
+			@$(FCLEAN) $(SERVER)
 			@$(ECHO) ""
 			@$(ECHO) "\033[33m[FCLEAN]\tRemoving symlinks\033[0m"
 			@$(RM) ./$(CLIENT_BIN)

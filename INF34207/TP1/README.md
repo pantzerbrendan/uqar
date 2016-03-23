@@ -9,12 +9,13 @@ Date de rendu : 08/04/2016 à 23h59
 
 ### Travail a realiser :
 
-#### Client
-
-#### Serveur
+Faire une application client-serveur permettant de partager des fichiers.
+Refaire cette application, mais en utilisant cette fois ci la memoire partagee
 
 ### Répartition du travail :
 
 | Qui? | Partie | Etat |
 | :----: | :----: | :----: |
+|  | Client | En cours |
+|  | Serveur |  |
 |  |  |  |

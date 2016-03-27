@@ -26,7 +26,7 @@ SELECT DISTINCT ruche.idRucher FROM ruche INNER JOIN (
 ) AS C ON ruche.idRucher = C.idRucher LEFT JOIN (
   SELECT * FROM rucher FULL JOIN adresse ON rucher.idAdresse = adresse.id
 ) AS A ON ruche.idRucher = A.idRucher
-WHERE C.cnt < 100 AND A.ville LIKE "Rimouski";
+WHERE C.count < 100 AND A.ville LIKE "Rimouski";
 
 -- # 7. Les IDs des ruchers comportant le plus grand nombre de ruches.
 CREATE VIEW nombre_ruches AS

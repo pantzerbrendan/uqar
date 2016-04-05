@@ -1,4 +1,5 @@
 
+#include <iostream>
 #include "fraction.hpp"
 
 int main(int ac, char **av)

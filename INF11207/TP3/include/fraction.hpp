@@ -19,7 +19,7 @@ public:
 	fraction(int);
 	fraction(const fraction &);
 	~fraction();
-	fraction 	&operator=(const fraction &);
+	void 		operator=(const fraction &);
 
 	// fration_unary_operators.cpp
 	fraction 	operator+();
@@ -38,18 +38,25 @@ public:
 	fraction 	operator*(const fraction &);
 	fraction 	operator/(const fraction &);
 
-	// fraction_binary_operators.cpp # increments (l:106)
+	// fraction_binary_operators.cpp # pre/post-increments (l:106)
 	fraction 	operator++(); // pre-increment
 	fraction 	operator--(); // pre-increment
 	fraction 	operator++(int); // post-increment
 	fraction 	operator--(int); // post-increment
 
+	// fraction_binary_operators.cpp # equal increments integers (l:138)
+	fraction 	&operator+=(const int);
+	fraction 	&operator-=(const int);
+	fraction 	&operator*=(const int);
+	fraction 	&operator/=(const int);
 
+	// fraction_binary_operators.cpp # equal increments object (l:168)
 	fraction 	&operator+=(const fraction &);
 	fraction 	&operator-=(const fraction &);
 	fraction 	&operator*=(const fraction &);
 	fraction 	&operator/=(const fraction &);
 
+	// fraction_relational_operators
 	bool		operator==(const fraction &);
 	bool		operator!=(const fraction &);
 

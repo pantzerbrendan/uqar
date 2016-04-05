@@ -23,8 +23,8 @@ fraction::fraction(int num)
 
 fraction::fraction(const fraction &frac)
 {
-	this->_numerator = frac.getNumerator();
-	this->_denominator = frac.getDenominator();
+	this->_numerator = frac._numerator;
+	this->_denominator = frac._denominator;
 	this->reduct();
 }
 
@@ -33,10 +33,10 @@ fraction::~fraction()
 	
 }
 
-fraction 	&fraction::operator=(const fraction &frac)
+void 		fraction::operator=(const fraction &frac)
 {
-	this->_numerator = frac.getNumerator();
-	this->_denominator = frac.getDenominator();
+	this->_numerator = frac._numerator;
+	this->_denominator = frac._denominator;
 	this->reduct();
 }
 
@@ -45,4 +45,10 @@ void 		fraction::reduct()
 	int 	pgcd = utils::pgcd(this->_numerator, this->_denominator);
 	this->_numerator /= pgcd;
 	this->_denominator /= pgcd;
+}
+
+std::ostream	&operator<<(std::ostream &stream, const fraction &f)
+{
+	stream << f.getNumerator() << "/" << f.getDenominator();
+	return (stream);
 }

@@ -19,6 +19,7 @@ SRC			=	$(SOURCE)/fraction.cpp \
 				$(SOURCE)/fraction_getseters.cpp \
 				$(SOURCE)/fraction_unary_operators.cpp \
 				$(SOURCE)/fraction_binary_operators.cpp \
+				$(SOURCE)/fraction_relational_operators.cpp \
 				$(SOURCE)/utils.cpp \
 
 OBJS		=	$(SRC:.cpp=.o)
@@ -48,7 +49,7 @@ $(NAME):		$(OBJS)
 $(TEST):		$(D_OBJS)
 				$(CXX) $(LDFLAGS) -c $(TESTS)/main_compilation.cpp -o $(TESTS)/main_compilation.o
 				$(GXX) $(D_OBJS) $(TESTS)/main_compilation.o -o $(TEST_COMP)
-				## Add compilation test here
+## Add compilation test here
 
 all:			$(NAME)
 

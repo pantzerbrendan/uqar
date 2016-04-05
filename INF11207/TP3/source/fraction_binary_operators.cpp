@@ -2,6 +2,7 @@
 #include "fraction.hpp"
 
 // integers
+
 fraction 	fraction::operator+(const int value)
 {
 	fraction r(this->_numerator, this->_denominator);
@@ -43,6 +44,7 @@ fraction 	fraction::operator/(const int value)
 }
 
 // object
+
 fraction 	fraction::operator+(const fraction &frac)
 {
 	fraction r(this->_numerator, this->_denominator);
@@ -135,7 +137,7 @@ fraction 	fraction::operator--(int)
 	return (r);
 }
 
-// equal increments integers
+// compound assignment integers
 
 fraction 	&fraction::operator+=(const int value)
 {
@@ -165,7 +167,7 @@ fraction 	&fraction::operator/=(const int value)
 	return *this;
 }
 
-// equal increments object
+// compound assignment object
 
 fraction 	&fraction::operator+=(const fraction &frac)
 {

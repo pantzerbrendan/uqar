@@ -32,25 +32,25 @@ public:
 	fraction 	operator*(const int);
 	fraction 	operator/(const int);
 
-	// fraction_binary_operators.cpp # object (l:45)
+	// fraction_binary_operators.cpp # object (l:46)
 	fraction 	operator+(const fraction &);
 	fraction 	operator-(const fraction &);
 	fraction 	operator*(const fraction &);
 	fraction 	operator/(const fraction &);
 
-	// fraction_binary_operators.cpp # pre/post-increments (l:106)
+	// fraction_binary_operators.cpp # pre/post-increments (l:108)
 	fraction 	operator++(); // pre-increment
 	fraction 	operator--(); // pre-increment
 	fraction 	operator++(int); // post-increment
 	fraction 	operator--(int); // post-increment
 
-	// fraction_binary_operators.cpp # equal increments integers (l:138)
+	// fraction_binary_operators.cpp # compound assignment integers (l:140)
 	fraction 	&operator+=(const int);
 	fraction 	&operator-=(const int);
 	fraction 	&operator*=(const int);
 	fraction 	&operator/=(const int);
 
-	// fraction_binary_operators.cpp # equal increments object (l:168)
+	// fraction_binary_operators.cpp # compound assignment object (l:170)
 	fraction 	&operator+=(const fraction &);
 	fraction 	&operator-=(const fraction &);
 	fraction 	&operator*=(const fraction &);

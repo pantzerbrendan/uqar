@@ -44,7 +44,8 @@ LDFLAGS		+=	-I$(INCLUDE)
 
 $(NAME):		CXXFLAGS += -Werror
 $(NAME):		$(OBJS)
-				$(CXX) $(OBJS) -o $(NAME)
+				$(CXX) $(LDFLAGS) -c main.cpp -o main.o
+				$(CXX) $(OBJS) main.o -o $(NAME)
 
 $(TEST):		$(D_OBJS)
 				$(CXX) $(LDFLAGS) -c $(TESTS)/main_compilation.cpp -o $(TESTS)/main_compilation.o

@@ -9,8 +9,7 @@ fraction 	fraction::operator+()
 fraction 	fraction::operator-()
 {
 	this->_numerator = -this->_numerator;
-	this->_denominator = -this->_denominator;
-	this->reduct();
+	//this->reduct();
 	return (fraction(this->_numerator, this->_denominator));
 }
 
@@ -18,6 +17,6 @@ fraction 	fraction::operator~()
 {
 	this->_numerator = ~this->_numerator;
 	this->_denominator = ~this->_denominator;
-	this->reduct();
+	//this->reduct();
 	return (fraction(this->_numerator, this->_denominator));
 }

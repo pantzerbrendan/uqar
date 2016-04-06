@@ -15,7 +15,7 @@ uint	fraction::getDenominator() const
 void	fraction::setNumerator(const int value)
 {
 	this->_numerator = value;
-	this->reduct();
+	//this->reduct();
 }
 
 void	fraction::setDenominator(const uint value)
@@ -23,5 +23,5 @@ void	fraction::setDenominator(const uint value)
 	if (value == 0)
 		throw new std::string("error: denominator cannot be equal to 0\nFloating exception");
 	this->_denominator = value;
-	this->reduct();
+	//this->reduct();
 }

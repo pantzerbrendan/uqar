@@ -66,11 +66,15 @@ public:
 	void		setNumerator(const int);
 	void 		setDenominator(const uint);
 
-private:
 	void 		reduct();
 
 };
 
 std::ostream &operator<<(std::ostream &, const fraction &);
+
+fraction 	operator+(const int, const fraction &);
+fraction 	operator-(const int, const fraction &);
+fraction 	operator*(const int, const fraction &);
+fraction 	operator/(const int, const fraction &);
 
 #endif /* !FRACTION_HPP_ */
